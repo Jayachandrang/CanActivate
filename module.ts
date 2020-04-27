@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Login } from '../login.component';
+import { Login } from '../login.component'; // Login Component
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuardService } from 'CanActivate';
+import { AuthGuardService } from 'AuthGuardService';
 
 const routes: Routes = [
   {
     path: '',
-    component: UpdateCollectionComponent,
-    canActivate : [AuthGuardService]
+    component: Login,
+    canActivate : [AuthGuardService] // Returns true if user matches else returns false.
   }
 ];
 
